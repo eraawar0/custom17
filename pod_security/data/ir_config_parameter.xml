@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+        <record id="system_param_csp" model="ir.config_parameter">
+            <field name="key">web.content_security_policy</field>
+            <field name="value">default-src 'self'; form-action 'self'; frame-ancestors 'self'; object-src 'none'; base-uri 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval'; style-src 'self' 'unsafe-inline';</field>
+        </record>
+        
+        <record id="system_param_hsts" model="ir.config_parameter">
+            <field name="key">web.strict_transport_security</field>
+            <field name="value">max-age=31536000; includeSubDomains</field>
+        </record>
+        
+        <record id="system_param_referrer_policy" model="ir.config_parameter">
+            <field name="key">web.referrer_policy</field>
+            <field name="value">strict-origin-when-cross-origin</field>
+        </record>
+        
+        <record id="system_param_csp_report_only" model="ir.config_parameter">
+            <field name="key">web.content_security_policy_report_only</field>
+            <field name="value">false</field>
+        </record>
+    </data>
+</odoo>
